@@ -1,6 +1,7 @@
 ﻿using Atacado.Service.Estoque;
 using Atacado.Poco.Estoque;
 using Atacado.EF.Database;
+using ConsoleAppTeste.Testes;
 
 namespace ConsoleAppTeste
 {
@@ -8,20 +9,27 @@ namespace ConsoleAppTeste
     {
         public static void Main(string[] args)
         {
-            TestarListarService();
+            TestarProduto();
+
             Console.ReadLine();
         }
 
-        private static void TestarListarService()
+        private static void TestarCategoria()
         {
-            CategoriaService srv = new CategoriaService();
-            List<CategoriaPoco> listaPoco = srv.Listar();
-            foreach (CategoriaPoco poco in listaPoco)
-            {
-                Console.WriteLine("Codigo: {0} - {1} - {2}", poco.Codigo, poco.Descricao, poco.Situacao);
-                Console.WriteLine("-------------------------------------------------");
-            }
+            CategoriaTeste teste = new CategoriaTeste();
+            teste.Executar();
         }
 
+        private static void TestarSubcategoria()
+        {
+            SubcategoriaTeste teste = new SubcategoriaTeste();
+            teste.Executar();
+        }
+
+        private static void TestarProduto()
+        {
+            ProdutoTeste teste = new ProdutoTeste();
+            teste.Executar();
+        }
     }
 }

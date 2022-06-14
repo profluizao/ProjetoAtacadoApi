@@ -375,6 +375,8 @@ namespace Atacado.EF.Database
                     .HasConstraintName("FK_Subcategoria_Categoria");
             });
 
+            modelBuilder.Entity<Subcategoria>().ToTable("Subcategoria");
+
             modelBuilder.Entity<TipoFormaPagto>(entity =>
             {
                 entity.Property(e => e.IdTipoFormaPagto).ValueGeneratedNever();

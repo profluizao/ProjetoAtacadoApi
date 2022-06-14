@@ -12,5 +12,10 @@ namespace Atacado.Service.Ancestral
         { 
             throw new NotImplementedException();
         }
+
+        public virtual TPoco Selecionar(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
