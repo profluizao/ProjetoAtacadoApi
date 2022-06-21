@@ -10,12 +10,32 @@ namespace Atacado.Service.Ancestral
     {
         public virtual List<TPoco> Listar()
         { 
-            throw new NotImplementedException();
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
         public virtual TPoco Selecionar(int id)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
+        }
+
+        public virtual TPoco Criar(TPoco obj)
+        {
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
+        }
+
+        public virtual TPoco Atualizar(TPoco obj)
+        {
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
+        }
+
+        public virtual TPoco Excluir(TPoco obj)
+        {
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
+        }
+
+        public virtual TPoco Excluir(int id)
+        {
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
     }
 }
