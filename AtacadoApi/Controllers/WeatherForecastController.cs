@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AtacadoApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/demo/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

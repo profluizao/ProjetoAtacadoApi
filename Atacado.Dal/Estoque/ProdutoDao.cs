@@ -26,9 +26,14 @@ namespace Atacado.Dal.Estoque
             return obj;
         }
 
+        public List<Produto> ReadAll(int skip, int take)
+        {
+            return this.contexto.Produtos.Skip(skip).Take(take).ToList();
+        }
+
         public override List<Produto> ReadAll()
         {
-            return this.contexto.Produtos.ToList();
+            throw new NotImplementedException();
         }
 
         public override Produto Update(Produto obj)

@@ -1,53 +1,53 @@
-﻿using Atacado.Poco.Estoque;
-using Atacado.Service.Estoque;
+﻿using Atacado.Poco.Auxiliar;
+using Atacado.Service.Auxiliar;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AtacadoApi.Controllers
 {
-    [Route("api/estoque/[controller]")]
+    [Route("api/auxiliar/[controller]")]
     [ApiController]
-    public class SubcategoriaController : ControllerBase
+    public class TipoRebanhoController : ControllerBase
     {
-        private SubcategoriaService servico;
+        private TipoRebanhoService servico;
 
-        public SubcategoriaController() : base()
+        public TipoRebanhoController() : base()
         {
-            this.servico = new SubcategoriaService();
+            this.servico = new TipoRebanhoService();
         }
 
         [HttpGet("{skip:int}/{take:int}")]
-        public List<SubcategoriaPoco> GetAll(int skip, int take)
-        { 
+        public List<TipoRebanhoPoco> GetAll(int skip, int take)
+        {
             return this.servico.Listar(skip, take);
         }
 
         [HttpGet("{id:int}")]
-        public SubcategoriaPoco GetPorID(int id)
+        public TipoRebanhoPoco GetPorID(int id)
         {
             return this.servico.Selecionar(id);
         }
 
         [HttpPost]
-        public SubcategoriaPoco Post([FromBody]SubcategoriaPoco poco)
+        public TipoRebanhoPoco Post([FromBody] TipoRebanhoPoco poco)
         {
             return this.servico.Criar(poco);
         }
 
         [HttpPut]
-        public SubcategoriaPoco Put([FromBody] SubcategoriaPoco poco)
+        public TipoRebanhoPoco Put([FromBody] TipoRebanhoPoco poco)
         {
             return this.servico.Atualizar(poco);
         }
 
         [HttpDelete]
-        public SubcategoriaPoco Delete([FromBody] SubcategoriaPoco poco)
+        public TipoRebanhoPoco Delete([FromBody] TipoRebanhoPoco poco)
         {
             return this.servico.Excluir(poco);
         }
 
         [HttpDelete("{id:int}")]
-        public SubcategoriaPoco DeletePorID(int id)
+        public TipoRebanhoPoco DeletePorID(int id)
         {
             return this.servico.Excluir(id);
         }

@@ -47,6 +47,18 @@ namespace Atacado.EF.Database
         public virtual DbSet<VwExibirProdutosComDetalhe> VwExibirProdutosComDetalhes { get; set; } = null!;
         public virtual DbSet<VwFuncionariosAtivosInformacao> VwFuncionariosAtivosInformacaos { get; set; } = null!;
 
+
+
+        /// <summary>
+        /// Adicionado pelo Programador.
+        /// </summary>
+        public virtual DbSet<TipoRebanho> TipoRebanhos { get; set; } = null!;
+
+        /// <summary>
+        /// Adicionado pelo Programador.
+        /// </summary>
+        public virtual DbSet<Rebanho> Rebanhos { get; set; } = null!;
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -362,6 +374,9 @@ namespace Atacado.EF.Database
                     .HasConstraintName("FK_SubDistrito_UF");
             });
 
+            //
+            //
+            //
             modelBuilder.Entity<Subcategoria>(entity =>
             {
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
@@ -376,6 +391,9 @@ namespace Atacado.EF.Database
             });
 
             modelBuilder.Entity<Subcategoria>().ToTable("Subcategoria");
+            //
+            //
+            //
 
             modelBuilder.Entity<TipoFormaPagto>(entity =>
             {
@@ -419,6 +437,32 @@ namespace Atacado.EF.Database
 
                 entity.Property(e => e.SexoFuncionario).IsFixedLength();
             });
+
+
+            //
+            // Adicionado pelo Luiz Augusto - 23/06/2022 - 16:40.
+            //
+            modelBuilder.Entity<TipoRebanho>(entity =>
+            {
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+
+            modelBuilder.Entity<TipoRebanho>().ToTable("Tipo_Rebanho");
+
+            modelBuilder.Entity<Rebanho>(entity =>
+            {
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+
+            modelBuilder.Entity<Rebanho>().ToTable("Rebanho");
+            //
+            // Adicionado pelo Programador.
+            //
+
 
             OnModelCreatingPartial(modelBuilder);
         }
