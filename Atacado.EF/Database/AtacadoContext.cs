@@ -59,6 +59,12 @@ namespace Atacado.EF.Database
         /// </summary>
         public virtual DbSet<Rebanho> Rebanhos { get; set; } = null!;
 
+        /// <summary>
+        /// Adicionado pelo Programador.
+        /// </summary>
+        public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -438,7 +444,6 @@ namespace Atacado.EF.Database
                 entity.Property(e => e.SexoFuncionario).IsFixedLength();
             });
 
-
             //
             // Adicionado pelo Luiz Augusto - 23/06/2022 - 16:40.
             //
@@ -451,6 +456,10 @@ namespace Atacado.EF.Database
 
             modelBuilder.Entity<TipoRebanho>().ToTable("Tipo_Rebanho");
 
+            //
+            // Adicionado pelo Programador.
+            //
+
             modelBuilder.Entity<Rebanho>(entity =>
             {
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
@@ -459,10 +468,19 @@ namespace Atacado.EF.Database
             });
 
             modelBuilder.Entity<Rebanho>().ToTable("Rebanho");
+
             //
             // Adicionado pelo Programador.
             //
 
+            modelBuilder.Entity<Funcionario>(entity =>
+            {
+                entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+
+            modelBuilder.Entity<Funcionario>().ToTable("Funcionario");
 
             OnModelCreatingPartial(modelBuilder);
         }
