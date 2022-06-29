@@ -53,16 +53,10 @@ namespace Atacado.EF.Database
         /// Adicionado pelo Programador.
         /// </summary>
         public virtual DbSet<TipoRebanho> TipoRebanhos { get; set; } = null!;
-
-        /// <summary>
-        /// Adicionado pelo Programador.
-        /// </summary>
         public virtual DbSet<Rebanho> Rebanhos { get; set; } = null!;
-
-        /// <summary>
-        /// Adicionado pelo Programador.
-        /// </summary>
         public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
+        public virtual DbSet<Empresa> Empresas { get; set; } = null!;
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -444,9 +438,12 @@ namespace Atacado.EF.Database
                 entity.Property(e => e.SexoFuncionario).IsFixedLength();
             });
 
-            //
-            // Adicionado pelo Luiz Augusto - 23/06/2022 - 16:40.
-            //
+
+
+
+            // -------------------------------------------------------------------------
+            // Adicionado pelo Programador.
+            // -------------------------------------------------------------------------
             modelBuilder.Entity<TipoRebanho>(entity =>
             {
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
@@ -455,10 +452,6 @@ namespace Atacado.EF.Database
             });
 
             modelBuilder.Entity<TipoRebanho>().ToTable("Tipo_Rebanho");
-
-            //
-            // Adicionado pelo Programador.
-            //
 
             modelBuilder.Entity<Rebanho>(entity =>
             {
@@ -469,10 +462,6 @@ namespace Atacado.EF.Database
 
             modelBuilder.Entity<Rebanho>().ToTable("Rebanho");
 
-            //
-            // Adicionado pelo Programador.
-            //
-
             modelBuilder.Entity<Funcionario>(entity =>
             {
                 entity.Property(e => e.DataInclusao).HasDefaultValueSql("(getdate())");
@@ -481,6 +470,12 @@ namespace Atacado.EF.Database
             });
 
             modelBuilder.Entity<Funcionario>().ToTable("Funcionario");
+
+            modelBuilder.Entity<Empresa>().ToTable("Empresa");
+
+            // -------------------------------------------------------------------------
+            // FIM DO BLOCO ADICIONADO PELO PROGRAMADOR.
+            // -------------------------------------------------------------------------
 
             OnModelCreatingPartial(modelBuilder);
         }

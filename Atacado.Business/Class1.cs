@@ -1,4 +1,4 @@
-﻿namespace Atacado.Service
+﻿namespace Atacado.Business
 {
     public class Class1
     {

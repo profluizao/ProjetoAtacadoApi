@@ -1,25 +1,18 @@
 ﻿using Atacado.EF.Database;
-using Atacado.Mapper.Auxiliar;
+using Atacado.Mapper.Ancestral;
 using Atacado.Poco.Auxiliar;
 using Atacado.Repository.Auxiliar;
 using Atacado.Service.Ancestral;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Atacado.Service.Auxiliar
 {
     public class BancoService : BaseAncestralService<BancoPoco, Banco>
     {
-        private BancoMapper mapConfig;
-
         private BancoRepository repositorio;
 
         public BancoService()
         {
-            this.mapConfig = new BancoMapper();
+            this.mapeador = new MapeadorGenerico<BancoPoco, Banco>();
             this.repositorio = new BancoRepository(new AtacadoContext());
         }
 
@@ -39,7 +32,7 @@ namespace Atacado.Service.Auxiliar
 
         protected override List<BancoPoco> ProcessarListaDOM(List<Banco> listDOM)
         {
-            return listDOM.Select(dom => this.mapConfig.Mapper.Map<BancoPoco>(dom)).ToList();
+            return listDOM.Select(dom => this.mapeador.Mecanismo.Map<BancoPoco>(dom)).ToList();
         }
     }
 }
