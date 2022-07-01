@@ -13,6 +13,15 @@ namespace Atacado.Service.Ancestral
     {
         protected MapeadorGenerico<TPoco, TDom> mapeador;
 
+        protected List<string> mensagensProcessamento;
+
+        public List<string> MensagensProcessamento => this.mensagensProcessamento;
+
+        public BaseAncestralService()
+        {
+            this.mensagensProcessamento = new List<string>();
+        }
+
         public virtual List<TPoco> Listar()
         { 
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");

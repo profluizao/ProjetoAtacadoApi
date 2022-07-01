@@ -3,44 +3,59 @@ using Atacado.Poco.RH;
 
 namespace Atacado.Business.RH
 {
-    public class FuncionarioRegra : IRule
+    /// <summary>
+    /// 
+    /// </summary>
+    public class FuncionarioRegra : RuleAncestor<FuncionarioPoco>, IRule
     {
-        private List<string> ruleMessages;
-        public List<string> RuleMessages => this.ruleMessages;
+        /// <summary>
+        /// 
+        /// </summary>
+        public FuncionarioRegra() : base()
+        { }
 
-        private FuncionarioPoco poco;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="poco"></param>
+        public FuncionarioRegra(FuncionarioPoco poco) : base(poco)
+        { }
 
-        public FuncionarioRegra(FuncionarioPoco poco)
-        {
-            this.ruleMessages = new List<string>();
-            this.poco = poco;
-        }
-
-        public bool Process()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public override bool Process()
         {
             bool resultado = true;
 
-            if (this.NomeRegra() == false)
-            { 
+            string mensagemProcessamento = string.Empty;
+
+            if (RegrasGenericas.NomeRegra(this.poco.Nome, ref mensagemProcessamento) == false)
+            {
+                this.ruleMessages.Add(mensagemProcessamento);
                 resultado = false;
             }
-            //...
-            //...
-            //...
-            //aqui vão as outras regras.
+
+            if (RegrasGenericas.SobrenomeRegra(this.poco.Sobrenome, ref mensagemProcessamento) == false)
+            {
+                this.ruleMessages.Add(mensagemProcessamento);
+                resultado = false;
+            }
+
+            if (RegrasGenericas.SexoRegra(this.poco.Sexo, ref mensagemProcessamento) == false)
+            {
+                this.ruleMessages.Add(mensagemProcessamento);
+                resultado = false;
+            }
+
+            if (RegrasGenericas.EmailRegra(this.poco.Email, ref mensagemProcessamento) == false)
+            {
+                this.ruleMessages.Add(mensagemProcessamento);
+                resultado = false;
+            }
 
             return resultado;
-        }
-
-        private bool NomeRegra()
-        {
-            if (string.IsNullOrEmpty(this.poco.Nome) == true)
-            {
-                this.ruleMessages.Add("Nome não pode ser vazio.");
-                return false;
-            }
-            else
-                return true;
         }
     }
 }
