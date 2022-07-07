@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Atacado.Envelope.Ancestral.BaseEnvelopeJSON">
+    <Position X="5" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgACAAAAAAAAAA=</HashCode>
+      <FileName>Ancestral\BaseEnvelopeJSON.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Atacado.Envelope.Ancestral.DataLinks">
+    <Position X="7.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAwAAIAAAAAAAAAAAIABAAAEAAAABAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Ancestral\DataLinks.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

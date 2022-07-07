@@ -2,52 +2,52 @@
 
 namespace Atacado.Service.Ancestral
 {
-    public abstract class BaseAncestralService<TPoco, TDom> 
+    public abstract class BaseEnvelopadaService<TPoco, TDom, TEnvelope>
         where TPoco : class
         where TDom : class
+        where TEnvelope : class
     {
-        protected MapeadorGenerico<TPoco, TDom> mapeador;
+        protected MapeadorGenericoEnvelopado<TPoco, TDom, TEnvelope> mapeador;
 
         protected List<string> mensagensProcessamento;
-
         public List<string> MensagensProcessamento => this.mensagensProcessamento;
 
-        public BaseAncestralService()
+        public BaseEnvelopadaService()
         {
             this.mensagensProcessamento = new List<string>();
         }
 
-        public virtual List<TPoco> Listar()
-        { 
-            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
-        }
-
-        public virtual TPoco Selecionar(int id)
+        public virtual TEnvelope Selecionar(int id)
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
-        public virtual TPoco Criar(TPoco obj)
+        public virtual List<TEnvelope> Listar()
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
-        public virtual TPoco Atualizar(TPoco obj)
+        public virtual TEnvelope Criar(TPoco obj)
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
-        public virtual TPoco Excluir(TPoco obj)
+        public virtual TEnvelope Atualizar(TPoco obj)
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
-        public virtual TPoco Excluir(int id)
+        public virtual TEnvelope Excluir(TPoco obj)
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
 
-        protected virtual List<TPoco> ProcessarListaDOM(List<TDom> listDOM)
+        public virtual TEnvelope Excluir(int id)
+        {
+            throw new NotImplementedException("Deixa de ser preguiçoso!!!");
+        }
+
+        protected virtual List<TEnvelope> ProcessarListaDOM(List<TDom> listDOM)
         {
             throw new NotImplementedException("Deixa de ser preguiçoso!!!");
         }
