@@ -48,7 +48,6 @@ namespace Atacado.EF.Database
         public virtual DbSet<VwFuncionariosAtivosInformacao> VwFuncionariosAtivosInformacaos { get; set; } = null!;
 
 
-
         /// <summary>
         /// Adicionado pelo Programador.
         /// </summary>
@@ -56,8 +55,8 @@ namespace Atacado.EF.Database
         public virtual DbSet<Rebanho> Rebanhos { get; set; } = null!;
         public virtual DbSet<Funcionario> Funcionarios { get; set; } = null!;
         public virtual DbSet<Empresa> Empresas { get; set; } = null!;
-
-
+        public virtual DbSet<Aquicultura> Aquiculturas { get; set; } = null!;
+        public virtual DbSet<TipoAquicultura> TipoAquiculturas { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -441,8 +440,10 @@ namespace Atacado.EF.Database
 
 
 
+
+
             // -------------------------------------------------------------------------
-            // Adicionado pelo Programador.
+            // ADICIONADO MANUALMENTE PELO PROGRAMADOR.
             // -------------------------------------------------------------------------
             modelBuilder.Entity<TipoRebanho>(entity =>
             {
@@ -473,9 +474,24 @@ namespace Atacado.EF.Database
 
             modelBuilder.Entity<Empresa>().ToTable("Empresa");
 
+            modelBuilder.Entity<TipoAquicultura>(entity =>
+            {
+                entity.Property(e => e.Situacao).HasDefaultValueSql("((1))");
+            });
+
+            modelBuilder.Entity<TipoAquicultura>().ToTable("Tipo_Aquicultura");
+
+            modelBuilder.Entity<Aquicultura>().ToTable("Aquicultura");
+
             // -------------------------------------------------------------------------
-            // FIM DO BLOCO ADICIONADO PELO PROGRAMADOR.
+            // FIM DO BLOCO ADICIONADO MANUALMENTE PELO PROGRAMADOR.
             // -------------------------------------------------------------------------
+
+
+
+
+
+
 
             OnModelCreatingPartial(modelBuilder);
         }

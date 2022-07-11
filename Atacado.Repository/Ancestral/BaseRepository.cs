@@ -51,7 +51,8 @@ namespace Atacado.Repository.Ancestral
             }
             else
             { 
-                return this.context.Set<TEntity>().Skip(skip).Take(take).AsEnumerable();
+                var teste = this.context.Set<TEntity>().Skip(skip).Take(take).AsEnumerable();
+                return teste;
             }
         }
 

@@ -8,18 +8,9 @@ namespace Atacado.Service.Estoque
     {
         private AtacadoContext contexto;
 
-        private CategoriaRepository categoriaRepo;
-
-        private SubcategoriaRepository subcategoriaRepo;
-
-        private ProdutoRepository produtoRepo;
-
         public RelatorioService()
         {
             this.contexto = new AtacadoContext();
-            this.categoriaRepo = new CategoriaRepository(this.contexto);
-            this.subcategoriaRepo = new SubcategoriaRepository(this.contexto);
-            this.produtoRepo = new ProdutoRepository(this.contexto);
         }
 
         public List<RelatorioPoco> CategoriaPorID(int idCategoria)
