@@ -1,4 +1,5 @@
-﻿using Atacado.Poco.Auxiliar;
+﻿using Atacado.EF.Database;
+using Atacado.Poco.Auxiliar;
 using Atacado.Service.Auxiliar;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public RelatorioAquiculturaController() : base()
+        public RelatorioAquiculturaController(AtacadoContext contexto) : base()
         {
-            this.servico = new RelatorioAquiculturaService();
+            this.servico = new RelatorioAquiculturaService(contexto);
         }
 
         /// <summary>

@@ -15,6 +15,13 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="contexto"></param>
+        public RelatorioController(AtacadoContext contexto) : base()
+        { }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="idRebanho"></param>
         /// <returns></returns>
         [HttpGet("fichacadastral/{idRebanho:int}")]

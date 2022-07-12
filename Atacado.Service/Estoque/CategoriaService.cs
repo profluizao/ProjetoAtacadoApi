@@ -22,6 +22,12 @@ namespace Atacado.Service.Estoque
             this.repositorio = new CategoriaRepository(new AtacadoContext());
         }
 
+        public CategoriaService(AtacadoContext contexto)
+        {
+            this.mapConfig = new CategoriaMapper();
+            this.repositorio = new CategoriaRepository(contexto);
+        }
+
         public override List<CategoriaPoco> Listar()
         {
             List<Categoria> listDOM = this.repositorio.Read().ToList();

@@ -1,4 +1,5 @@
-﻿using Atacado.Envelope.RH;
+﻿using Atacado.EF.Database;
+using Atacado.Envelope.RH;
 using Atacado.Poco.RH;
 using Atacado.Service.RH;
 using Microsoft.AspNetCore.Http;
@@ -18,9 +19,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public EmpresaController() : base()
+        public EmpresaController(AtacadoContext contexto) : base()
         { 
-            this.servico = new EmpresaService();
+            this.servico = new EmpresaService(contexto);
         }
 
         /// <summary>

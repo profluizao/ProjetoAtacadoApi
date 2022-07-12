@@ -1,10 +1,14 @@
-﻿using Atacado.Envelope.Auxiliar;
+﻿using Atacado.EF.Database;
+using Atacado.Envelope.Auxiliar;
 using Atacado.Poco.Auxiliar;
 using Atacado.Service.Auxiliar;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 namespace AtacadoApi.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/auxiliar/[controller]")]
     [ApiController]
     public class AquiculturaController : ControllerBase
@@ -14,9 +18,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public AquiculturaController() : base()
+        public AquiculturaController(AtacadoContext contexto) : base()
         {
-            this.servico = new AquiculturaService();
+            this.servico = new AquiculturaService(contexto);
         }
 
         /// <summary>

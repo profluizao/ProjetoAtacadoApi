@@ -16,6 +16,12 @@ namespace Atacado.Service.Estoque
             this.repositorio = new SubcategoriaRepository(new AtacadoContext());
         }
 
+        public SubcategoriaService(AtacadoContext contexto)
+        {
+            this.mapeador = new Mapper.Ancestral.MapeadorGenerico<SubcategoriaPoco, Subcategoria>();
+            this.repositorio = new SubcategoriaRepository(contexto);
+        }
+
         public override List<SubcategoriaPoco> Listar()
         {
             List<Subcategoria> listDOM = this.repositorio.Read().ToList();

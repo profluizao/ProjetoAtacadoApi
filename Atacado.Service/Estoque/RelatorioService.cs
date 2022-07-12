@@ -8,9 +8,9 @@ namespace Atacado.Service.Estoque
     {
         private AtacadoContext contexto;
 
-        public RelatorioService()
+        public RelatorioService(AtacadoContext contexto)
         {
-            this.contexto = new AtacadoContext();
+            this.contexto = contexto;
         }
 
         public List<RelatorioPoco> CategoriaPorID(int idCategoria)

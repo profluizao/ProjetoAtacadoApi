@@ -16,6 +16,12 @@ namespace Atacado.Service.Auxiliar
             this.repositorio = new BancoRepository(new AtacadoContext());
         }
 
+        public BancoService(AtacadoContext contexto)
+        {
+            this.mapeador = new MapeadorGenerico<BancoPoco, Banco>();
+            this.repositorio = new BancoRepository(contexto);
+        }
+
         public List<BancoPoco> Listar(int pular = 0, int exibir = 0)
         {
             List<Banco> listDOM;

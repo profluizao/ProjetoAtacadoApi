@@ -17,6 +17,12 @@ namespace Atacado.Service.RH
             this.repositorio = new EmpresaRepository(new AtacadoContext());
         }
 
+        public EmpresaService(AtacadoContext contexto) : base()
+        {
+            this.mapeador = new MapeadorGenericoEnvelopado<EmpresaPoco, Empresa, EmpresaEnvelopeJSON>();
+            this.repositorio = new EmpresaRepository(contexto);
+        }
+
         public override EmpresaEnvelopeJSON Atualizar(EmpresaPoco obj)
         {
             Empresa temp = this.mapeador.Mecanismo.Map<Empresa>(obj);

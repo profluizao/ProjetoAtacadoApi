@@ -4,7 +4,12 @@
         <name>AtacadoApi</name>
     </assembly>
     <members>
-        <member name="M:AtacadoApi.Controllers.AquiculturaController.#ctor">
+        <member name="T:AtacadoApi.Controllers.AquiculturaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -50,12 +55,79 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:AtacadoApi.Controllers.BancoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.BancoController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.BancoController.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.CategoriaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Post(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Put(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Delete(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:AtacadoApi.Controllers.EmpresaController">
             <summary>
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.EmpresaController.#ctor">
+        <member name="M:AtacadoApi.Controllers.EmpresaController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -108,7 +180,7 @@
             Recurso Funcionário.
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.FuncionarioController.#ctor">
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             Construtor da classe.
             </summary>
@@ -168,7 +240,7 @@
             Recurso Rebanho.
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.RebanhoController.#ctor">
+        <member name="M:AtacadoApi.Controllers.RebanhoController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -229,7 +301,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.RelatorioAquiculturaController.#ctor">
+        <member name="M:AtacadoApi.Controllers.RelatorioAquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -255,6 +327,12 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
         </member>
         <member name="M:AtacadoApi.Controllers.RelatorioController.Get(System.Int32)">
             <summary>
@@ -297,7 +375,7 @@
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.ReworkRelatorioController.#ctor">
+        <member name="M:AtacadoApi.Controllers.ReworkRelatorioController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -309,12 +387,65 @@
             <param name="idCategoria"></param>
             <returns></returns>
         </member>
+        <member name="T:AtacadoApi.Controllers.SubcategoriaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="skip"></param>
+            <param name="take"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Post(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Put(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Delete(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.DeletePorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:AtacadoApi.Controllers.TipoAquiculturaController">
             <summary>
             
             </summary>
         </member>
-        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.#ctor">
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
             <summary>
             
             </summary>
@@ -354,6 +485,59 @@
             <returns></returns>
         </member>
         <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.DeletePorId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.TipoRebanhoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="skip"></param>
+            <param name="take"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Post(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Put(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Delete(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.DeletePorID(System.Int32)">
             <summary>
             
             </summary>

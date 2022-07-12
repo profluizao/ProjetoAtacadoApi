@@ -8,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//string conStr = this.Configuration.GetConnectionString("MyConn");
+string conStr = builder.Configuration.GetConnectionString("Atacado");
 
-builder.Services.AddDbContext<AtacadoContext>(options => options.UseSqlServer());
+builder.Services.AddDbContext<AtacadoContext>(options => options.UseSqlServer(conStr));
 
 builder.Services.AddEndpointsApiExplorer();
 

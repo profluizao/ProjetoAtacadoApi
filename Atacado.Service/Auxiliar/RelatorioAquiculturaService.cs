@@ -7,9 +7,9 @@ namespace Atacado.Service.Auxiliar
     {
         private AtacadoContext contexto;
 
-        public RelatorioAquiculturaService()
+        public RelatorioAquiculturaService(AtacadoContext contexto)
         {
-            this.contexto = new AtacadoContext();
+            this.contexto = contexto;
         }
 
         public List<RelatorioAquiculturaPoco> PesquisarPorIdMunicipioAnoProducaoNaoNula(int idMunicipio, int ano)
