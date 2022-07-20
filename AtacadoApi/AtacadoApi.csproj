@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>C:\Users\luiza\source\repos\ProjetoAtacadoApi\AtacadoApi\Documentos\AtacadoApi.xml</DocumentationFile>
+    <DocumentationFile>../Documentos/AtacadoApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -19,9 +19,9 @@ builder.Services.AddSwaggerGen(options =>
         options.SwaggerDoc("v1", new OpenApiInfo()
         {
             Version = "v1",
-            Title = "Atacado API - PSG - Capacitação 2022-04",
-            Description = "API REST utilizada para estudo e desenvolvimento do modelo de aplicações, " +
-                "baseado em boas práticas e no modelo de maturidade de Richardson.",
+            Title = "Atacado API - PSG - CapacitaÃ§Ã£o 2022-04",
+            Description = "API REST utilizada para estudo e desenvolvimento do modelo de aplicaÃ§Ãµes, " +
+                "baseado em boas prÃ¡ticas e no modelo de maturidade de Richardson.",
             TermsOfService = new Uri("http://www.psgtecnologia.com.br"),
             Contact = new OpenApiContact()
             {
@@ -40,6 +40,9 @@ builder.Services.AddSwaggerGen(options =>
     }
 );
 
+//ADICIONANDO CORS.
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -48,6 +51,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//HABILITANDO CORS EM TODOS OS RECURSOS DA API.
+app.UseCors(c => 
+{
+    c.AllowAnyHeader();
+    c.AllowAnyMethod();
+    c.AllowAnyOrigin();
+});
 
 app.UseHttpsRedirection();
 

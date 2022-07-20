@@ -38,6 +38,12 @@ namespace Atacado.Service.Estoque
             return listDOM.Select(dom => this.mapeador.Mecanismo.Map<ProdutoPoco>(dom)).ToList();
         }
 
+        public List<ProdutoPoco> PesquisarPorSubcategoria(int idsub)
+        {
+            List<Produto> listDOM = this.repositorio.Browse(sub => sub.IdSubcategoria == idsub).ToList();
+            return this.ProcessarListaDOM(listDOM);
+        }
+
         public override ProdutoPoco Selecionar(int id)
         {
             Produto dom = this.repositorio.Read(id);

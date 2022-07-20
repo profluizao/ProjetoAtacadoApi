@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AtacadoApi</name>
+    </assembly>
+    <members>
+        <member name="T:AtacadoApi.Controllers.AquiculturaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.Get(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.GetPorId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.Post(Atacado.Poco.Auxiliar.AquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.Put(Atacado.Poco.Auxiliar.AquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.Delete(Atacado.Poco.Auxiliar.AquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.AquiculturaController.DeletePorId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.BancoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.BancoController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.BancoController.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.CategoriaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.GetAll">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Post(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Put(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Delete(Atacado.Poco.Estoque.CategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.CategoriaController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.EmpresaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Realiza a busca por todos os registros, filtrando onde inicia (skip) e a quantidade(take).
+            </summary>
+            <param name="skip">Onde inicia os resultados da pesquisa.</param>
+            <param name="take">Quantos registros serão retornados.</param>
+            <returns>Coleção de dados.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.Get(System.Int32)">
+            <summary>
+            Realiza a busca pela chave do registro.
+            </summary>
+            <param name="id">Chave do Registro</param>
+            <returns>Resultado da busca</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.Post(Atacado.Poco.RH.EmpresaPoco)">
+            <summary>
+            Cria um registro no recurso.
+            </summary>
+            <param name="poco">Registro que será criado.</param>
+            <returns>Registro criado.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.Put(Atacado.Poco.RH.EmpresaPoco)">
+            <summary>
+            Atualiza um registro no recurso.
+            </summary>
+            <param name="poco">Registro que será atualizado.</param>
+            <returns>Registro atualizado.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.Delete(Atacado.Poco.RH.EmpresaPoco)">
+            <summary>
+            Exclui um registro no recurso.
+            </summary>
+            <param name="poco">Registro que será excluído.</param>
+            <returns>Registro excluído.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.EmpresaController.Delete(System.Int32)">
+            <summary>
+            Exclui um registro no recurso, utilizando a chave do registro.
+            </summary>
+            <param name="id">Chave do registro.</param>
+            <returns>Registro excluído.</returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.FuncionarioController">
+            <summary>
+            Recurso Funcionário.
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            Construtor da classe.
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            Realiza a busca por todos os registros, filtrando onde inicia (skip) e a quantidade(take).
+            </summary>
+            <param name="skip">Onde inicia os resultados da pesquisa.</param>
+            <param name="take">Quantos registros serão retornados.</param>
+            <returns>Coleção de dados.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.GetPorMatricula(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="mat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.Post(Atacado.Poco.RH.FuncionarioPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.Put(Atacado.Poco.RH.FuncionarioPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.Delete(Atacado.Poco.RH.FuncionarioPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.FuncionarioController.Delete(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.RebanhoController">
+            <summary>
+            Recurso Rebanho.
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.Get(System.Int32,System.Int32)">
+            <summary>
+            Realiza a busca por todos os registros, filtrando onde inicia (skip) e a quantidade(take).
+            </summary>
+            <param name="skip">Onde inicia os resultados da pesquisa.</param>
+            <param name="take">Quantos registros serão retornados.</param>
+            <returns>Coleção de dados.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.GetPorId(System.Int32)">
+            <summary>
+            Realiza a busca por um único registro, usando a chave primária.
+            </summary>
+            <param name="id">Chave Primária do Registro.</param>
+            <returns>Registro encontrado.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.GetPorAnoRefIdMun(System.Int32,System.Int32)">
+            <summary>
+            Realiza a busca por registros, passando o Ano Referência e o ID do Munícipio.
+            </summary>
+            <param name="anoRef">Ano Referência</param>
+            <param name="idMun">ID do Munícipio</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.Post(Atacado.Poco.Auxiliar.RebanhoPoco)">
+            <summary>
+            Cria um novo registro no recurso.
+            </summary>
+            <param name="poco">Instância que será criada.</param>
+            <returns>Instância criada.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.Put(Atacado.Poco.Auxiliar.RebanhoPoco)">
+            <summary>
+            Altera um registro no recurso.
+            </summary>
+            <param name="poco">Registro que será alterado.</param>
+            <returns>Registro alterado.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.Delete(Atacado.Poco.Auxiliar.RebanhoPoco)">
+            <summary>
+            Exclui um registro do recurso.
+            </summary>
+            <param name="poco">Registro a ser excluído</param>
+            <returns>Registro excluído.</returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RebanhoController.DeletePorId(System.Int32)">
+            <summary>
+            Exclui um registro do recurso.
+            </summary>
+            <param name="id">ID do registro que será excluído.</param>
+            <returns>Registro excluído.</returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.RelatorioAquiculturaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioAquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioAquiculturaController.GetPorIdMunicipioAnoProducaoNaoNula(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idMunicipio"></param>
+            <param name="ano"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioAquiculturaController.GetPorIdTipoAquiculturaAnoIdMunicipio(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idTipoAquicultura"></param>
+            <param name="ano"></param>
+            <param name="idMunicipio"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.RelatorioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+            <param name="contexto"></param>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.Get(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idRebanho"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.Get(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="anoRef"></param>
+            <param name="codigoIbge7"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.GetPorCategoria(System.Int32)">
+            <summary>
+            Realiza busca do relatorio por Codigo(IdCat).
+            </summary>
+            <param name="IdCat">Codigo de registro</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.GetPorSubcategoria(System.Int32)">
+            <summary>
+            Realiza busca do relatorio por Codigo(IdSub).
+            </summary>
+            <param name="IdSub">Codigo de registro</param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.RelatorioController.GetPorProduto(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="IdProt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.ReworkRelatorioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.ReworkRelatorioController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.ReworkRelatorioController.GetRelatorioCategoriaPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idCategoria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.SubcategoriaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="skip"></param>
+            <param name="take"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.GetSubcategoriasPorIdCategoria(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idCategoria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Post(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Put(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.Delete(Atacado.Poco.Estoque.SubcategoriaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.SubcategoriaController.DeletePorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.TipoAquiculturaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.GetPorId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.Post(Atacado.Poco.Auxiliar.TipoAquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.Put(Atacado.Poco.Auxiliar.TipoAquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.Delete(Atacado.Poco.Auxiliar.TipoAquiculturaPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoAquiculturaController.DeletePorId(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AtacadoApi.Controllers.TipoRebanhoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.#ctor(Atacado.EF.Database.AtacadoContext)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.GetAll(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="skip"></param>
+            <param name="take"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.GetPorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Post(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Put(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.Delete(Atacado.Poco.Auxiliar.TipoRebanhoPoco)">
+            <summary>
+            
+            </summary>
+            <param name="poco"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AtacadoApi.Controllers.TipoRebanhoController.DeletePorID(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

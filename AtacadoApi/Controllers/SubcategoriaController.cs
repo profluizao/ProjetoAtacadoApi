@@ -1,4 +1,5 @@
-﻿using Atacado.Poco.Estoque;
+﻿using Atacado.EF.Database;
+using Atacado.Poco.Estoque;
 using Atacado.Service.Estoque;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,9 +18,9 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
-        public SubcategoriaController() : base()
+        public SubcategoriaController(AtacadoContext contexto) : base()
         {
-            this.servico = new SubcategoriaService();
+            this.servico = new SubcategoriaService(contexto);
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace AtacadoApi.Controllers
         /// <returns></returns>
         [HttpGet("{skip:int}/{take:int}")]
         public List<SubcategoriaPoco> GetAll(int skip, int take)
-        { 
+        {
             return this.servico.Listar(skip, take);
         }
 
@@ -48,10 +49,21 @@ namespace AtacadoApi.Controllers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="idCategoria"></param>
+        /// <returns></returns>
+        [HttpGet("PorIdCategoria/{idCategoria:int}")]
+        public List<SubcategoriaPoco> GetSubcategoriasPorIdCategoria(int idCategoria)
+        {
+            return this.servico.PesquisarPorCategoria(idCategoria);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="poco"></param>
         /// <returns></returns>
         [HttpPost]
-        public SubcategoriaPoco Post([FromBody]SubcategoriaPoco poco)
+        public SubcategoriaPoco Post([FromBody] SubcategoriaPoco poco)
         {
             return this.servico.Criar(poco);
         }
